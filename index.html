@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignem Feram | Business Consulting</title>
+<meta name="description" content="Ignem Feram is the business consulting practice of Alan Hall. Strategy, process, AI roadmapping, and change management for leaders scaling through the capacity wall.">
+<link rel="icon" type="image/png" href="shield.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #111111;
+    --mute: #6b6b6b;
+    --rule: #e2e2e2;
+    --paper: #ffffff;
+    --black: #0d0d0d;
+    --serif: "Cormorant Garamond", Garamond, Georgia, serif;
+    --sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body { font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  .page { display: grid; grid-template-columns: 38% 62%; min-height: 100vh; }
+
+  /* Left panel */
+  .brand {
+    background: var(--black);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 56px 48px;
+  }
+  .brand .lockup { display: flex; flex-direction: column; align-items: center; }
+  .brand .mark { width: 150px; height: auto; display: block; filter: invert(1); }
+  .brand .name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 36px 0 0;
+  }
+  .brand .name span { display: block; }
+  .brand .meta {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    line-height: 2;
+  }
+
+  /* Right panel */
+  .content {
+    padding: 72px 9% 56px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin: 0 0 20px;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+    max-width: 16em;
+  }
+  .lede { font-size: 17px; color: #333; max-width: 36em; margin: 0 0 48px; }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+    border-top: 1px solid var(--rule);
+    margin: 0 0 48px;
+  }
+  .service { padding: 22px 0; border-bottom: 1px solid var(--rule); }
+  .service .n {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--mute);
+    margin: 0 0 6px;
+  }
+  .service h3 { font-size: 16px; font-weight: 600; margin: 0 0 6px; }
+  .service p { font-size: 14.5px; color: #444; margin: 0; }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 48px;
+  }
+  .bottom h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin: 0 0 12px;
+  }
+  .bottom p { margin: 0; font-size: 14.5px; color: #333; }
+  .bottom .who { font-family: var(--sans); font-size: 18px; font-weight: 600; color: var(--ink); display: block; margin-bottom: 6px; }
+  a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+  a:hover { color: var(--mute); border-color: var(--mute); }
+  .contact a { font-size: 17px; font-weight: 500; }
+  .contact .li { display: block; margin-top: 14px; font-size: 14px; }
+
+  @media (max-width: 900px) {
+    .page { grid-template-columns: 1fr; }
+    .brand { padding: 40px 28px; }
+    .brand .mark { width: 72px; }
+    .brand .name { font-size: 26px; margin: 0; }
+    .brand .lockup { flex-direction: row; align-items: center; justify-content: center; gap: 20px; text-align: left; }
+    .brand .meta { display: none; }
+    .content { padding: 44px 28px 48px; }
+    .lede { margin-bottom: 36px; }
+    .services { grid-template-columns: 1fr; gap: 0; margin-bottom: 36px; }
+    .bottom { grid-template-columns: 1fr; gap: 32px; }
+    .foot-mobile { display: block; margin-top: 40px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mute); }
+  }
+  .foot-mobile { display: none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="brand">
+    <div class="lockup">
+      <img class="mark" src="shield.png" alt="">
+      <div class="name"><span>Ignem</span><span>Feram</span></div>
+    </div>
+    <div class="meta">Ignem Feram LLC<br>Atlanta, Georgia</div>
+  </aside>
+
+  <main class="content">
+    <p class="eyebrow">Business Consulting</p>
+    <h1>Helping leaders scale through the capacity wall.</h1>
+    <p class="lede">Every organization eventually hits a capacity wall, where the systems that got it to today are not enough to get it to tomorrow. Ignem Feram helps leaders scale through those walls, with the strategic oversight and operational rigor to turn vision into functional reality.</p>
+
+    <section class="services" aria-label="What we do">
+      <div class="service">
+        <p class="n">I</p>
+        <h3>Strategic transformation</h3>
+        <p>Designing and executing long-term roadmaps that align cross-functional teams with future goals.</p>
+      </div>
+      <div class="service">
+        <p class="n">II</p>
+        <h3>AI strategy and operational roadmapping</h3>
+        <p>Automating high-volume, rules-heavy workflows to unlock capacity for high-impact leadership.</p>
+      </div>
+      <div class="service">
+        <p class="n">III</p>
+        <h3>Process engineering</h3>
+        <p>Lean and Agile methods to map workflows, remove bottlenecks, and install scalable systems.</p>
+      </div>
+      <div class="service">
+        <p class="n">IV</p>
+        <h3>Change management</h3>
+        <p>Leading teams through significant transitions, from insourcing payroll and benefits to organizational restructuring.</p>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div>
+        <h2>Principal</h2>
+        <p><span class="who">Alan Hall</span>Over 25 years of experience across 80+ countries navigating complex organizational transitions, from building a $100M global financial system from the ground up to architecting a 10-year strategic roadmap. His background runs from international logistics in the Near East to HR leadership in Atlanta. The constant is excellence and continuous improvement.</p>
+      </div>
+      <div class="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:alan@ignemferam.co">alan@ignemferam.co</a></p>
+        <p class="li"><a href="https://www.linkedin.com/in/malanhall" rel="me">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <p class="foot-mobile">Ignem Feram LLC &nbsp;&middot;&nbsp; Atlanta, Georgia</p>
+  </main>
+
+</div>
+</body>
+</html>
